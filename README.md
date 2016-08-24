@@ -6,7 +6,7 @@ I just adapted the driver to Node4 and add "WITH NONE" to each create/update to 
 I also disabled some features (discovery and transaction) to make it works.
 
 
-#loopback-connector-ibm
+#loopback-connector-ibmi
 
 The `loopback-connector-ibmi` module is the LoopBack connector for DB2 for IBM i based on the project https://github.com/pierrickrouxel/loopback-connector-db2i
 
@@ -18,13 +18,14 @@ The LoopBack IBMi connector supports:
 
 ## Installation
 
-@TO-Do: Add and npm package.
+In the loopback application directory:
+npm install loopback-connector-ibmi
 
 The `--save` option adds the dependency to the application's `package.json` file.
 
 ## Configuration
 
-Use the [data source generator](https://docs.strongloop.com/display/LB/Data+source+generator) (`slc loopback:datasource`) to add the DB2 data source to your application.
+Use the [data source generator](https://docs.strongloop.com/display/LB/Data+source+generator) (`slc loopback:datasource`) to add the IBMi data source to your application.
 The entry in the application's `server/datasources.json` will look something like this:
 
 ```
@@ -65,7 +66,7 @@ For example:
 
 ```
 var DataSource = require('loopback-datasource-juggler').DataSource;
-var DB2 = require('loopback-connector-db2');
+var DB2 = require('loopback-connector-ibmi');
 
 var config = {
   username: process.env.DB2_USERNAME,
