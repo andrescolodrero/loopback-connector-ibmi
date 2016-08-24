@@ -1,0 +1,73 @@
+{
+  "name": "loopback-connector-db2i",
+  "version": "1.0.14",
+  "description": "LoopBack Connector for IBM DB2 for i",
+  "keywords": [
+    "IBM",
+    "IBMi",
+    "StrongLoop",
+    "LoopBack",
+    "DB2",
+    "DB2i",
+    "DataSource",
+    "Connector"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint ./ && jscs ./",
+    "lint": "eslint ./ && jscs ./",
+    "test": "mocha --timeout 10000"
+  },
+  "dependencies": {
+    "async": "^1.5.0",
+    "debug": "^2.2.0",
+    "loopback-connector": "^2.3.0"
+  },
+  "devDependencies": {
+    "jscs": "^2.8.0",
+    "eslint": "^1.10.3",
+    "eslint-config-strongloop": "^1.0.2",
+    "loopback-datasource-juggler": "^2.43.0",
+    "mocha": "^2.3.4",
+    "rc": "^1.1.5",
+    "should": "^8.1.1",
+    "sinon": "^1.17.2",
+    "bluebird": "^2.9.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pierrickrouxel/loopback-connector-db2i.git"
+  },
+  "homepage": "https://github.com/pierrickrouxel/loopback-connector-db2i",
+  "bugs": {
+    "url": "https://github.com/pierrickrouxel/loopback-connector-db2i/issues"
+  },
+  "license": "Artistic-2.0",
+  "gitHead": "97cef6ab1b1d45293178e5b9de6f7d1362d1b152",
+  "_id": "loopback-connector-db2i@1.0.14",
+  "_shasum": "9aa290b89396d5ce6773473c6c4facfcd221acc3",
+  "_from": "loopback-connector-db2i@>=1.0.14 <2.0.0",
+  "_npmVersion": "2.15.1",
+  "_nodeVersion": "0.12.13",
+  "_npmUser": {
+    "name": "pierrickrouxel",
+    "email": "pierrick.rouxel@me.com"
+  },
+  "dist": {
+    "shasum": "9aa290b89396d5ce6773473c6c4facfcd221acc3",
+    "tarball": "https://registry.npmjs.org/loopback-connector-db2i/-/loopback-connector-db2i-1.0.14.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "pierrickrouxel",
+      "email": "pierrick.rouxel@me.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/loopback-connector-db2i-1.0.14.tgz_1466507664261_0.9633295743260533"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/loopback-connector-db2i/-/loopback-connector-db2i-1.0.14.tgz",
+  "readme": "ERROR: No README data found!"
+}
