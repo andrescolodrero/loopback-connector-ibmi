@@ -1,5 +1,11 @@
 # Work in progress
 
+Lots of work to do.
+
+I just adapted the driver to Node4 and add "WITH NONE" to each create/update to avoid commit problems. This should be a feature.
+I also disabled some features (discovery and transaction) to make it works.
+
+
 #loopback-connector-ibm
 
 The `loopback-connector-ibmi` module is the LoopBack connector for DB2 for IBM i based on the project https://github.com/pierrickrouxel/loopback-connector-db2i
