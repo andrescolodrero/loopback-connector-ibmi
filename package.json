@@ -1,7 +1,7 @@
 {
-  "name": "loopback-connector-db2i",
-  "version": "1.0.14",
-  "description": "LoopBack Connector for IBM DB2 for i",
+  "name": "loopback-connector-ibmi",
+  "version": "0.0.2",
+  "description": "LoopBack Connector for IBMi",
   "keywords": [
     "IBM",
     "IBMi",
@@ -36,38 +36,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/pierrickrouxel/loopback-connector-db2i.git"
+    "url": "git://github.com/andrescolodrero/loopback-connector-ibmi.git"
   },
-  "homepage": "https://github.com/pierrickrouxel/loopback-connector-db2i",
+  "homepage": "https://github.com/andrescolodrero/loopback-connector-ibmi",
   "bugs": {
-    "url": "https://github.com/pierrickrouxel/loopback-connector-db2i/issues"
-  },
-  "license": "Artistic-2.0",
-  "gitHead": "97cef6ab1b1d45293178e5b9de6f7d1362d1b152",
-  "_id": "loopback-connector-db2i@1.0.14",
-  "_shasum": "9aa290b89396d5ce6773473c6c4facfcd221acc3",
-  "_from": "loopback-connector-db2i@>=1.0.14 <2.0.0",
-  "_npmVersion": "2.15.1",
-  "_nodeVersion": "0.12.13",
-  "_npmUser": {
-    "name": "pierrickrouxel",
-    "email": "pierrick.rouxel@me.com"
+    "url": "https://github.com/andrescolodrero/loopback-connector-ibmi/issues"
+  
   },
   "dist": {
-    "shasum": "9aa290b89396d5ce6773473c6c4facfcd221acc3",
-    "tarball": "https://registry.npmjs.org/loopback-connector-db2i/-/loopback-connector-db2i-1.0.14.tgz"
+    "shasum": "",
+    "tarball": ""
   },
   "maintainers": [
     {
-      "name": "pierrickrouxel",
-      "email": "pierrick.rouxel@me.com"
+      "name": "andrescolodrero",
+      "email": "andrescolodrero@gmail.com"
     }
   ],
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/loopback-connector-db2i-1.0.14.tgz_1466507664261_0.9633295743260533"
+    "host": "",
+    "tmp": ""
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/loopback-connector-db2i/-/loopback-connector-db2i-1.0.14.tgz",
+  "_resolved": "",
   "readme": "ERROR: No README data found!"
 }
