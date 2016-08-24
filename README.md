@@ -1,22 +1,18 @@
 # Work in progress
 
-#loopback-connector-db2i
+#loopback-connector-ibm
 
-The `loopback-connector-db2i` module is the LoopBack connector for DB2 for IBM i.
+The `loopback-connector-ibmi` module is the LoopBack connector for DB2 for IBM i based on the project https://github.com/pierrickrouxel/loopback-connector-db2i
 
-The LoopBack DB2 connector supports:
+The LoopBack IBMi connector supports:
 
 - All [CRUD operations](https://docs.strongloop.com/display/LB/Creating%2C+updating%2C+and+deleting+data).
 - [Queries](https://docs.strongloop.com/display/LB/Querying+data) with fields, limit, order, skip and where filters.
-- Only native connection is supported (for the moment). Column organized tables are not supported.
+- Native Connection.
 
 ## Installation
 
-Enter the following in the top-level directory of your LoopBack application:
-
-```
-$ npm install loopback-connector-db2i --save
-```
+@TO-Do: Add and npm package.
 
 The `--save` option adds the dependency to the application's `package.json` file.
 
@@ -28,7 +24,7 @@ The entry in the application's `server/datasources.json` will look something lik
 ```
 "mydb": {
   "name": "mydb",
-  "connector": "db2i"
+  "connector": "ibmi"
 }
 ```
 
@@ -37,7 +33,7 @@ Edit `server/datasources.json` to add other supported properties as required:
 ```
 "mydb": {
   "name": "mydb",
-  "connector": "db2i",
+  "connector": "ibmi",
   "username": <username>,
   "password": <password>,
   "database": <database name>,
