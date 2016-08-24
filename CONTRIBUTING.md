@@ -1,9 +1,9 @@
 ### Contributing ###
 
-Thank you for your interest in `loopback-connector-db2`, an open source project
+Thank you for your interest in `loopback-connector-ibmi`, an open source project
 administered by StrongLoop (an IBM Company).
 
-Contributing to `loopback-connector-db2` is easy. In a few simple steps:
+Contributing to `loopback-connector-ibmi` is easy. In a few simple steps:
 
   * Ensure that your effort is aligned with the project's roadmap by
     talking to the maintainers, especially if you are going to spend a
