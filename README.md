@@ -1,6 +1,6 @@
 # Work in progress
 
-Lots of work to do.
+Lots of work to do, but the connecter can be used for get, create and update data from a Model.
 
 I just adapted the driver to Node4 and add "WITH NONE" to each create/update to avoid commit problems. This should be a feature.
 I also disabled some features (discovery and transaction) to make it works.
@@ -25,7 +25,8 @@ The `--save` option adds the dependency to the application's `package.json` file
 
 ## Configuration
 
-Use the [data source generator](https://docs.strongloop.com/display/LB/Data+source+generator) (`slc loopback:datasource`) to add the IBMi data source to your application.
+Use the [data source generator](https://docs.strongloop.com/display/LB/Data+source+generator) (`slc loopback:datasource`) to add the IBMi data source to your application. The Datasource generator doesnt contain "IBMi" conector, but you can create it manual.
+
 The entry in the application's `server/datasources.json` will look something like this:
 
 ```
