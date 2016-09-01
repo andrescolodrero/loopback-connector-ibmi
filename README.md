@@ -1,14 +1,14 @@
 # Work in progress
-asdasd
-Lots of work to do, but the connecter can be used for get, create and update data from a Model.
+Lots of work to do, but the connector can be used for get, create and update data from a Model.
 
-I just adapted the driver to Node4 and add "WITH NONE" to each create/update to avoid commit problems. This should be a feature.
-I also disabled some features (discovery and transaction) to make it works.
+I disabled "transaction" ORM feature.
 
 
 #loopback-connector-ibmi
 
 The `loopback-connector-ibmi` module is the LoopBack connector for DB2 for IBM i based on the project https://github.com/pierrickrouxel/loopback-connector-db2i
+
+The connector ONLY WORKS NATIVE ON IBMi.
 
 The LoopBack IBMi connector supports:
 
@@ -56,53 +56,55 @@ Property       | Type    | Description
 ---------------| --------| --------
 database       | String  | Database name
 schema         | String  | Specifies the default schema name that is used to qualify unqualified database objects in dynamically prepared SQL statements. The value of this property sets the value in the CURRENT SCHEMA special register on the database server. The schema name is case-sensitive, and must be specified in uppercase characters
-username       | String  | DB2 Username
-password       | String  | DB2 password associated with the username above
-hostname       | String  | DB2 server hostname or IP address
-port           | String  | DB2 server TCP port number
-useLimitOffset | Boolean | LIMIT and OFFSET must be configured on the DB2 server before use (compatibility mode)
+username       | String  | IBMi Username
+password       | String  | IBMi password associated with the username above
+hostname       | String  | IBMi server hostname or IP address
+
 
 Alternatively, you can create and configure the data source in JavaScript code.
 For example:
 
 ```
 var DataSource = require('loopback-datasource-juggler').DataSource;
-var DB2 = require('loopback-connector-ibmi');
+var DB2 = require('loopback-connector-db2i');
 
 var config = {
-  username: process.env.DB2_USERNAME,
-  password: process.env.DB2_PASSWORD,
-  hostname: process.env.DB2_HOSTNAME,
+  username: "IBMi USER",
+  password: "PASSWORD",
+  hostname: "disibic22",
   port: 50000,
-  database: 'SQLDB',
+  database: 'D205973W',
+  schema: 'ACL'
 };
 
 var db = new DataSource(DB2, config);
 
-var User = db.define('User', {
+
+  
+
+var User = db.define('USER', {
   name: { type: String },
   email: { type: String },
+  SALARY: {type: Number},
+  PERCENT: {type: Number},
 });
-
-db.autoupdate('User', function(err) {
-  if (err) {
-    console.log(err);
-    return;
-  }
-
-  User.create({
-    name: 'Tony',
-    email: 'tony@t.com',
-  }, function(err, user) {
-    console.log(err, user);
-  });
-
-  User.find({ where: { name: 'Tony' }}, function(err, users) {
+// Find Existing User
+ User.find({ where: { name: 'Gunnar' }}, function(err, users) {
     console.log(err, users);
   });
 
-  User.destroyAll(function() {
-    console.log('example complete');
+// Create existing user. ID doesnt need to be created in the model.
+  User.create({
+    id: 1,
+    name: 'Test User',
+    email: 'tony@t.com',
+    SALARY: 12,
+    PERCENT: 11.7666,
+  }, function(err, user) {
+    console.log(err, user);
   });
-});
-```
+ 
+
+
+
+ 
