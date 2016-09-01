@@ -1,34 +1,38 @@
 # Work in progress
 
-#loopback-connector-db2i
+Lots of work to do, but the connecter can be used for get, create and update data from a Model.
 
-The `loopback-connector-db2i` module is the LoopBack connector for DB2 for IBM i.
+I just adapted the driver to Node4 and add "WITH NONE" to each create/update to avoid commit problems. This should be a feature.
+I also disabled some features (discovery and transaction) to make it works.
 
-The LoopBack DB2 connector supports:
+
+#loopback-connector-ibmi
+
+The `loopback-connector-ibmi` module is the LoopBack connector for DB2 for IBM i based on the project https://github.com/pierrickrouxel/loopback-connector-db2i
+
+The LoopBack IBMi connector supports:
 
 - All [CRUD operations](https://docs.strongloop.com/display/LB/Creating%2C+updating%2C+and+deleting+data).
 - [Queries](https://docs.strongloop.com/display/LB/Querying+data) with fields, limit, order, skip and where filters.
-- Only native connection is supported (for the moment). Column organized tables are not supported.
+- Native Connection.
 
 ## Installation
 
-Enter the following in the top-level directory of your LoopBack application:
-
-```
-$ npm install loopback-connector-db2i --save
-```
+In the loopback application directory:
+npm install loopback-connector-ibmi
 
 The `--save` option adds the dependency to the application's `package.json` file.
 
 ## Configuration
 
-Use the [data source generator](https://docs.strongloop.com/display/LB/Data+source+generator) (`slc loopback:datasource`) to add the DB2 data source to your application.
+Use the [data source generator](https://docs.strongloop.com/display/LB/Data+source+generator) (`slc loopback:datasource`) to add the IBMi data source to your application. The Datasource generator doesnt contain "IBMi" conector, but you can create it manual.
+
 The entry in the application's `server/datasources.json` will look something like this:
 
 ```
 "mydb": {
   "name": "mydb",
-  "connector": "db2i"
+  "connector": "ibmi"
 }
 ```
 
@@ -37,7 +41,7 @@ Edit `server/datasources.json` to add other supported properties as required:
 ```
 "mydb": {
   "name": "mydb",
-  "connector": "db2i",
+  "connector": "ibmi",
   "username": <username>,
   "password": <password>,
   "database": <database name>,
@@ -63,7 +67,7 @@ For example:
 
 ```
 var DataSource = require('loopback-datasource-juggler').DataSource;
-var DB2 = require('loopback-connector-db2');
+var DB2 = require('loopback-connector-ibmi');
 
 var config = {
   username: process.env.DB2_USERNAME,
