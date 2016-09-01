@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-ibmi",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "description": "LoopBack Connector for IBMi",
   "keywords": [
     "IBM",
@@ -19,9 +19,9 @@
     "test": "mocha --timeout 10000"
   },
   "dependencies": {
-    "async": "^1.5.0",
+    "async": "^1.5.2",
     "debug": "^2.2.0",
-    "loopback-connector": "^2.3.0"
+    "loopback-connector": "^2.4.0"
   },
   "devDependencies": {
     "jscs": "^2.8.0",
@@ -41,7 +41,6 @@
   "homepage": "https://github.com/andrescolodrero/loopback-connector-ibmi",
   "bugs": {
     "url": "https://github.com/andrescolodrero/loopback-connector-ibmi/issues"
-  
   },
   "dist": {
     "shasum": "",
@@ -58,6 +57,5 @@
     "tmp": ""
   },
   "directories": {},
-  "_resolved": "",
-  "readme": "ERROR: No README data found!"
+  "_resolved": ""
 }
